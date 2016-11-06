@@ -23,7 +23,7 @@ data = sys.stdin.read()
 dter = '%0D%0A'
 players = [x.replace('+', ' ').strip() for x in data[data.find('=')+1:].split(dter) if x] 
 players = [x for x in players if x]
-print players
+# print players
 
 random.seed()
 random.shuffle(players)

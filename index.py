@@ -25,8 +25,9 @@ players = [x.replace('+', ' ').strip() for x in data[data.find('=')+1:].split(dt
 players = [x for x in players if x]
 # print players
 
-random.seed()
-random.shuffle(players)
+# Strong random number
+r = random.SystemRandom()
+r.shuffle(players)
 
 # print players
 
@@ -36,9 +37,9 @@ team0 = players[0::2]
 team1 = players[1::2]
 teams = [team0, team1]
 
-random_bit = int(random.getrandbits(1))
+random_bit = int(r.getrandbits(1))
 
-white_west_facing = bool(random.getrandbits(1)) 
+white_west_facing = bool(r.getrandbits(1)) 
 
 print '<b>WHITE TEAM:</b>'
 print '<pre>'

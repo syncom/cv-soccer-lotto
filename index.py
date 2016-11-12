@@ -8,14 +8,34 @@ print '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
+<style type="text/css">
+  #cvsoccer {width: 300px;}
+
+  img.right {
+  margin:.5em;
+  border:0;
+  float: right;
+  }
+</style>
+
 <title>
 CV Invitational Soccer Lotto
 </title>
 </head>
+
+<body>
+
+<p>
+<img src="/images/cv-soccer.jpg" 
+alt="CV Inviational Soccer" 
+class="right" 
+id="cvsoccer"
+/>
+</p>
+
+<h1>CV Invitational Soccer Lotto</h1>
+
 '''
-print '<body>'
-print '<h1>CV Invitational Soccer Lotto</h1>'
-print ''
 
 # Read form textarea data 
 data = sys.stdin.read()

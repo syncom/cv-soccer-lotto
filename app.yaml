@@ -11,5 +11,14 @@ handlers:
   static_dir: images
 
 - url: /.*
-  script: index.py
+  script: lotto.app
 
+# [START libraries]
+libraries:
+- name: webapp2
+  version: latest
+
+- name: jinja2
+  version: latest
+
+# [END libraries]

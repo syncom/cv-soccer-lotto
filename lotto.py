@@ -16,14 +16,6 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 # [START main_page]
 class MainPage(webapp2.RequestHandler):
-    team_white = []
-    team_dark = []
-    field_selection = ''
-    roster = 'roster'
-
-    def lotto(self):
-        global roster
-        print self.roster
 
     def get(self):
    

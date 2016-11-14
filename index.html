@@ -32,19 +32,21 @@ id="cvsoccer"
 
 <h1>CV Invitational Soccer Lotto</h1>
 
-
+<!-- WHITE TEAM roster -->
 <b>WHITE TEAM:</b>
 <pre>
 {% for player in team_white -%}
 {{ player }}
 {% endfor -%}
 </pre>
+<!-- DARK TEAM roster -->
 <b>DARK TEAM:</b>
 <pre>
 {% for player in team_dark -%}
 {{ player }}
 {% endfor -%}
 </pre>
+<!-- Field selection -->
 <b>FIELD SELECTION:</b> {{ field_selection }} <br /><br />
 <form method="post" action="/">
 Enter Roster (one player per line) <br />

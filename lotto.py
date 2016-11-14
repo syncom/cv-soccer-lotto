@@ -29,7 +29,7 @@ class MainPage(webapp2.RequestHandler):
         # print "DEBUG:" + data
 
         dter = '\r\n'
-        players = [x.replace('+', ' ').strip() for x in data[data.find('=')+1:].split(dter) if x] 
+        players = [x.strip() for x in data[data.find('=')+1:].split(dter) if x] 
         players = [x for x in players if x]
 
         # Strong random number
@@ -61,9 +61,11 @@ class MainPage(webapp2.RequestHandler):
         }
    
         template = JINJA_ENVIRONMENT.get_template('index.html')
-        self.response.out.write(template.render(template_values))
+        self.response.write(template.render(template_values))
+# [END main_page]
 
 # [START app]
+
 app = webapp2.WSGIApplication([
     ('/', MainPage),
 ], debug=False)

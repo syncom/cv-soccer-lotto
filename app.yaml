@@ -2,6 +2,7 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+# [START handlers]
 handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
@@ -12,6 +13,7 @@ handlers:
 
 - url: /.*
   script: lotto.app
+# [END handlers]
 
 # [START libraries]
 libraries:
@@ -20,5 +22,4 @@ libraries:
 
 - name: jinja2
   version: latest
-
 # [END libraries]

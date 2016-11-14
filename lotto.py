@@ -47,6 +47,7 @@ class MainPage(webapp2.RequestHandler):
         # template values
         team_white = teams[random_bit]
         team_dark  = teams[1 - random_bit]
+        field_selection = ''
         if len(players):
             if white_west_facing:
                 field_selection = 'WHITE TEAM FACES WEST AT GAME START'
@@ -65,7 +66,7 @@ class MainPage(webapp2.RequestHandler):
 # [START app]
 app = webapp2.WSGIApplication([
     ('/', MainPage),
-], debug=True)
+], debug=False)
 
 # [END app]
 

@@ -29,7 +29,7 @@ class MainPage(webapp2.RequestHandler):
         # print "DEBUG:" + data
 
         dter = '\r\n'
-        players = [x.strip() for x in data[data.find('=')+1:].split(dter) if x] 
+        players = [x.strip() for x in data.split(dter) if x] 
         players = [x for x in players if x]
 
         # Strong random number
